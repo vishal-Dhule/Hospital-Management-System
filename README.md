@@ -67,9 +67,12 @@ git clone https://github.com/vishal-Dhule/Hospital-Management-System.git
 
 ## 👨‍💻 Author
 
-**Vishal Dhule**  
+**Vishal Dhule**
 💼 Spring Boot Developer  
-📧 Email: vishal@example.com (update it)
+📧 Email: vishaldhule605@gmail.com 
+
+Linkedin :-
+www.linkedin.com/in/vishal-dhule
 
 ---
 
