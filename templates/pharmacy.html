@@ -1,0 +1,153 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block title %}
+Hospital Pharmacy | CityCare
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="py-5 text-white" style="background:linear-gradient(135deg,#0d6efd,#0dcaf0);">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">
+            <i class="bi bi-capsule-pill"></i> Hospital Pharmacy
+        </h1>
+        <p class="lead mt-3">
+            24-hour pharmacy service providing genuine medicines and healthcare products.
+        </p>
+    </div>
+</section>
+
+<!-- Pharmacy Details -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row align-items-center">
+
+            <!-- Image -->
+            <div class="col-lg-6 mb-4">
+                <img src="https://images.unsplash.com/photo-1587854692152-cbe660dbde88?w=900"
+                     class="img-fluid rounded-4 shadow"
+                     alt="Hospital Pharmacy">
+            </div>
+
+            <!-- Content -->
+            <div class="col-lg-6">
+
+                <h2 class="fw-bold text-primary mb-3">
+                    <i class="bi bi-capsule me-2"></i>Hospital Pharmacy
+                </h2>
+
+                <p class="text-muted">
+                    The CityCare Hospital Pharmacy operates 24 hours a day,
+                    ensuring that patients receive the medicines they need
+                    whenever required. Our pharmacy stocks only genuine,
+                    high-quality medicines from trusted manufacturers.
+                </p>
+
+                <p class="text-muted">
+                    Our experienced pharmacists provide expert guidance on
+                    medication dosage, possible side effects, storage
+                    instructions, and drug interactions to ensure safe and
+                    effective treatment.
+                </p>
+
+                <div class="row mt-4">
+
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm mb-3">
+                            <div class="card-body text-center">
+                                <i class="bi bi-clock-history text-primary fs-1"></i>
+                                <h5 class="mt-3">24/7 Service</h5>
+                                <p class="small text-muted">
+                                    Emergency medicines available around the clock.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <div class="card border-0 shadow-sm mb-3">
+                            <div class="card-body text-center">
+                                <i class="bi bi-shield-check text-success fs-1"></i>
+                                <h5 class="mt-3">Quality Medicines</h5>
+                                <p class="small text-muted">
+                                    100% genuine medicines from trusted brands.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <h4 class="mt-4 text-primary">Our Services</h4>
+
+                <ul class="list-group list-group-flush mb-4">
+                    <li class="list-group-item">✔ Prescription Medicine Dispensing</li>
+                    <li class="list-group-item">✔ Over-the-Counter Medicines</li>
+                    <li class="list-group-item">✔ Health & Wellness Products</li>
+                    <li class="list-group-item">✔ Patient Medication Counseling</li>
+                    <li class="list-group-item">✔ Blood Pressure & Diabetes Care Products</li>
+                    <li class="list-group-item">✔ Emergency Medicine Supply</li>
+                    <li class="list-group-item">✔ Home Delivery (Selected Areas)</li>
+                </ul>
+
+                <a href="{% url 'contact' %}" class="btn btn-primary btn-lg rounded-pill">
+                    <i class="bi bi-envelope-fill me-2"></i>Contact Pharmacy
+                </a>
+
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold">Why Choose CityCare Pharmacy?</h2>
+            <p class="text-muted">
+                We are committed to providing safe, reliable, and affordable healthcare products.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-patch-check-fill text-primary fs-1"></i>
+                    <h4 class="mt-3">Certified Medicines</h4>
+                    <p class="text-muted">
+                        We provide only genuine and certified medicines.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-person-heart text-danger fs-1"></i>
+                    <h4 class="mt-3">Expert Pharmacists</h4>
+                    <p class="text-muted">
+                        Qualified professionals are always available for assistance.
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-truck text-success fs-1"></i>
+                    <h4 class="mt-3">Fast Service</h4>
+                    <p class="text-muted">
+                        Quick medicine dispensing with minimal waiting time.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+{% endblock %}

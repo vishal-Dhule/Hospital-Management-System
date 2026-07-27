@@ -1,0 +1,465 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Book Appointment | MediCare Hospital
+{% endblock %}
+
+{% block content %}
+
+<!-- Bootstrap Icons -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+
+body{
+    background:#f4f8fb;
+}
+
+/* HERO */
+
+.hero{
+    background:linear-gradient(rgba(0,82,155,.85),rgba(0,82,155,.85)),
+    url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0c?w=1600");
+    background-size:cover;
+    background-position:center;
+    min-height:85vh;
+    display:flex;
+    align-items:center;
+    color:white;
+}
+
+.hero h1{
+    font-size:60px;
+    font-weight:800;
+}
+
+.hero p{
+    font-size:20px;
+}
+
+/* CARD */
+
+.appointment-card{
+    margin-top:-100px;
+    background:white;
+    border-radius:25px;
+    box-shadow:0 15px 40px rgba(0,0,0,.15);
+}
+
+.section-title{
+    font-weight:700;
+    color:#0d6efd;
+}
+
+.form-control,
+.form-select{
+    border-radius:12px;
+    padding:12px;
+}
+
+.btn-book{
+    border-radius:40px;
+    padding:15px;
+    font-size:18px;
+    font-weight:bold;
+}
+
+/* FEATURES */
+
+.feature-card{
+    border:none;
+    border-radius:20px;
+    transition:.4s;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 10px 30px rgba(0,0,0,.15);
+}
+
+.feature-icon{
+    font-size:50px;
+    color:#0d6efd;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.hero{
+text-align:center;
+padding:60px 0;
+}
+
+.hero h1{
+font-size:38px;
+}
+
+.appointment-card{
+margin-top:-40px;
+}
+
+}
+
+</style>
+
+
+<!-- HERO -->
+
+<section class="hero">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+<div class="col-lg-6">
+
+<h1>Book Your Appointment</h1>
+
+<p class="my-4">
+
+Consult with experienced doctors and get world-class healthcare services.
+
+</p>
+
+<a href="#appointment" class="btn btn-warning btn-lg px-5 rounded-pill">
+Book Now
+</a>
+
+</div>
+
+<div class="col-lg-6 text-center">
+
+<img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=700"
+class="img-fluid rounded-4 shadow-lg">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% if messages %}
+
+{% for message in messages %}
+
+<div class="alert alert-success alert-dismissible fade show">
+
+{{ message }}
+
+<button
+class="btn-close"
+data-bs-dismiss="alert">
+</button>
+
+</div>
+
+{% endfor %}
+
+{% endif %}
+
+<!-- FORM -->
+
+<section id="appointment">
+
+<div class="container">
+
+<div class="appointment-card p-5">
+
+<h2 class="text-center section-title mb-5">
+
+<i class="bi bi-calendar-check"></i>
+
+Appointment Form
+
+</h2>
+
+<form method="POST">
+
+{% csrf_token %}
+
+<div class="row">
+
+<div class="col-md-6 mb-4">
+
+<label>Full Name</label>
+
+<input type="text"
+class="form-control"
+name="name"
+placeholder="Enter your name"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Email</label>
+
+<input
+type="email"
+class="form-control"
+name="email"
+placeholder="example@gmail.com"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Phone Number</label>
+
+<input
+type="text"
+class="form-control"
+name="phone"
+placeholder="+91XXXXXXXXXX"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Age</label>
+
+<input
+type="number"
+class="form-control"
+name="age"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Gender</label>
+
+<select
+class="form-select"
+name="gender">
+
+<option>Male</option>
+<option>Female</option>
+<option>Other</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Department</label>
+
+<select
+class="form-select"
+name="department">
+
+<option>General Medicine</option>
+<option>Cardiology</option>
+<option>Neurology</option>
+<option>Orthopedics</option>
+<option>Pediatrics</option>
+<option>Emergency</option>
+
+</select>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Appointment Date</label>
+
+<input
+type="date"
+class="form-control"
+name="date"
+required>
+
+</div>
+
+<div class="col-md-6 mb-4">
+
+<label>Appointment Time</label>
+
+<input
+type="time"
+class="form-control"
+name="time"
+required>
+
+</div>
+
+<div class="col-12 mb-4">
+
+<label>Symptoms</label>
+
+<textarea
+class="form-control"
+rows="5"
+name="symptoms"
+placeholder="Describe your problem"></textarea>
+
+</div>
+
+<div class="col-12">
+
+<button class="btn btn-primary btn-book w-100">
+
+<i class="bi bi-check-circle-fill"></i>
+
+Book Appointment
+
+</button>
+
+</div>
+
+</div>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+
+
+<!-- FEATURES -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="section-title">
+
+Why Choose Our Hospital?
+
+</h2>
+
+<p>
+
+We provide quality healthcare with experienced specialists.
+
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<div class="col-lg-3">
+
+<div class="card feature-card text-center p-4">
+
+<div class="feature-icon">
+
+<i class="bi bi-heart-pulse-fill"></i>
+
+</div>
+
+<h4 class="mt-3">
+
+Expert Doctors
+
+</h4>
+
+<p>
+
+Highly qualified specialists.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card feature-card text-center p-4">
+
+<div class="feature-icon">
+
+<i class="bi bi-hospital-fill"></i>
+
+</div>
+
+<h4 class="mt-3">
+
+Modern Hospital
+
+</h4>
+
+<p>
+
+Latest healthcare technology.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card feature-card text-center p-4">
+
+<div class="feature-icon">
+
+<i class="bi bi-clock-history"></i>
+
+</div>
+
+<h4 class="mt-3">
+
+24×7 Service
+
+</h4>
+
+<p>
+
+Emergency support anytime.
+
+</p>
+
+</div>
+
+</div>
+
+<div class="col-lg-3">
+
+<div class="card feature-card text-center p-4">
+
+<div class="feature-icon">
+
+<i class="bi bi-shield-check"></i>
+
+</div>
+
+<h4 class="mt-3">
+
+Safe Treatment
+
+</h4>
+
+<p>
+
+Trusted by thousands of patients.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

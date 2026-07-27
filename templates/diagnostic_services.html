@@ -1,0 +1,117 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Diagnostic Services | CityCare Hospital
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">
+            <i class="bi bi-heart-pulse-fill"></i>
+            Diagnostic Services
+        </h1>
+        <p class="lead mt-3">
+            Complete laboratory testing, MRI, CT Scan, X-Ray and advanced health checkups.
+        </p>
+    </div>
+</section>
+
+<!-- Diagnostic Services -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Our Diagnostic Facilities</h2>
+            <p class="text-muted">
+                We provide advanced diagnostic services with modern equipment and experienced specialists.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-droplet-half display-4 text-danger"></i>
+                    <h4 class="mt-3">Laboratory Tests</h4>
+                    <p>Complete blood tests, pathology, urine tests, thyroid profile, diabetes screening and more.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-badge-ad display-4 text-primary"></i>
+                    <h4 class="mt-3">MRI Scan</h4>
+                    <p>Advanced MRI imaging for accurate diagnosis with high-quality reports.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-cpu display-4 text-success"></i>
+                    <h4 class="mt-3">CT Scan</h4>
+                    <p>High-speed CT scans for detailed internal imaging using modern technology.</p>
+                </div>
+            </div>
+
+            <div class="col-md-6 col-lg-3">
+                <div class="card border-0 shadow h-100 text-center p-4">
+                    <i class="bi bi-camera2 display-4 text-warning"></i>
+                    <h4 class="mt-3">Digital X-Ray</h4>
+                    <p>Fast digital X-ray services with low radiation exposure and instant reporting.</p>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-light py-5">
+    <div class="container">
+
+        <div class="row text-center g-4">
+
+            <div class="col-md-4">
+                <i class="bi bi-clock-history display-4 text-primary"></i>
+                <h4 class="mt-3">Quick Reports</h4>
+                <p>Same-day reports for most diagnostic tests.</p>
+            </div>
+
+            <div class="col-md-4">
+                <i class="bi bi-shield-check display-4 text-success"></i>
+                <h4 class="mt-3">Accurate Diagnosis</h4>
+                <p>Latest medical equipment ensures reliable and precise results.</p>
+            </div>
+
+            <div class="col-md-4">
+                <i class="bi bi-person-check-fill display-4 text-danger"></i>
+                <h4 class="mt-3">Expert Team</h4>
+                <p>Experienced radiologists and laboratory specialists available.</p>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5 text-center">
+    <div class="container">
+        <h2 class="fw-bold">Need a Diagnostic Test?</h2>
+        <p class="text-muted mb-4">
+            Book your diagnostic appointment today with CityCare Hospital.
+        </p>
+
+        <a href="{% url 'appointment' %}" class="btn btn-primary btn-lg rounded-pill px-5">
+            <i class="bi bi-calendar-check-fill me-2"></i>
+            Book Appointment
+        </a>
+    </div>
+</section>
+
+{% endblock %}

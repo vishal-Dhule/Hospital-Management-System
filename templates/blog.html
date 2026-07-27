@@ -1,0 +1,178 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Health Blog | CityCare Hospital
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Health Blog</h1>
+        <p class="lead">
+            Stay informed with expert health tips, wellness advice, and the latest medical updates from CityCare Hospital.
+        </p>
+    </div>
+</section>
+
+<!-- Blog Section -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <!-- Blog 1 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=600"
+                        class="card-img-top" alt="Healthy Lifestyle">
+                    <div class="card-body">
+                        <h4 class="card-title">10 Tips for a Healthy Lifestyle</h4>
+                        <p class="text-muted">
+                            Learn simple daily habits that can improve your health, increase energy, and reduce the risk of chronic diseases.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: July 2026</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog 2 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=600"
+                        class="card-img-top" alt="Heart Health">
+                    <div class="card-body">
+                        <h4 class="card-title">How to Keep Your Heart Healthy</h4>
+                        <p class="text-muted">
+                            Discover essential diet, exercise, and lifestyle tips recommended by our cardiology experts.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: July 2026</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog 3 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=600"
+                        class="card-img-top" alt="Mental Health">
+                    <div class="card-body">
+                        <h4 class="card-title">Mental Health Matters</h4>
+                        <p class="text-muted">
+                            Understand the importance of mental wellness and practical ways to reduce stress and anxiety.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: June 2026</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog 4 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1505751172876-fa1923c5c528?w=600"
+                        class="card-img-top" alt="Diabetes">
+                    <div class="card-body">
+                        <h4 class="card-title">Understanding Diabetes</h4>
+                        <p class="text-muted">
+                            Learn about diabetes symptoms, prevention, healthy eating, and effective management strategies.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: June 2026</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog 5 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1576765608866-5b51046452be?w=600"
+                        class="card-img-top" alt="Nutrition">
+                    <div class="card-body">
+                        <h4 class="card-title">Nutrition for Better Health</h4>
+                        <p class="text-muted">
+                            Explore balanced diets, essential nutrients, and healthy meal planning for every age group.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: May 2026</small>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Blog 6 -->
+            <div class="col-lg-4 col-md-6">
+                <div class="card shadow-sm border-0 h-100">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=600"
+                        class="card-img-top" alt="Regular Checkup">
+                    <div class="card-body">
+                        <h4 class="card-title">Why Regular Health Checkups Matter</h4>
+                        <p class="text-muted">
+                            Early diagnosis saves lives. Discover why routine health screenings are essential for everyone.
+                        </p>
+                        <a href="#" class="btn btn-primary">Read More</a>
+                    </div>
+                    <div class="card-footer bg-white">
+                        <small class="text-muted">Published: April 2026</small>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Newsletter -->
+<section class="py-5 bg-light">
+    <div class="container text-center">
+        <h2 class="fw-bold mb-3">Subscribe to Our Health Newsletter</h2>
+        <p class="text-muted mb-4">
+            Receive the latest health tips, wellness articles, and hospital news directly in your inbox.
+        </p>
+
+        <form class="row justify-content-center">
+            <div class="col-md-6">
+                <input type="email" class="form-control form-control-lg" placeholder="Enter your email">
+            </div>
+            <div class="col-md-2 mt-3 mt-md-0">
+                <button class="btn btn-primary btn-lg w-100">
+                    Subscribe
+                </button>
+            </div>
+        </form>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="py-5">
+    <div class="container text-center">
+        <h2 class="fw-bold">Need Medical Advice?</h2>
+        <p class="text-muted">
+            Our experienced doctors are here to help you with personalized healthcare solutions.
+        </p>
+
+        <a href="{% url 'appointment' %}" class="btn btn-primary btn-lg me-2">
+            Book Appointment
+        </a>
+
+        <a href="{% url 'contact' %}" class="btn btn-outline-primary btn-lg">
+            Contact Us
+        </a>
+    </div>
+</section>
+
+{% endblock %}

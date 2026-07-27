@@ -1,0 +1,281 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Services - City Care Hospital{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">
+            Our Medical Services
+        </h1>
+        <p class="lead">
+            Advanced healthcare solutions with experienced doctors,
+            modern technology and patient-focused care.
+        </p>
+    </div>
+</section>
+
+
+<!-- Services Section -->
+<section class="py-5">
+
+<div class="container">
+
+<div class="row g-4">
+
+
+<!-- Emergency Care -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+Emergency Care
+</h4>
+
+<p>
+24/7 emergency department with trained medical staff,
+ambulance services and immediate critical care.
+</p>
+
+<a href="{% url 'emergency' %}" class="btn btn-outline-primary">
+
+    🚑 Contact Emergency
+
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+
+<!-- OPD Services -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+OPD Consultation
+</h4>
+
+<p>
+Consult experienced specialists for regular checkups,
+diagnosis and treatment planning.
+</p>
+
+<a href="{% url 'appointment' %}" 
+class="btn btn-outline-primary">
+Book Appointment
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- Surgery -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+Advanced Surgery
+</h4>
+
+<p>
+Modern operation theatres with experienced surgeons
+and advanced surgical equipment.
+</p>
+
+<a href="{% url 'advanced_surgery' %}"
+class="btn btn-outline-primary">
+Know More
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- Diagnostics -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+Diagnostic Services
+</h4>
+
+<p>
+Complete laboratory testing, MRI, CT Scan,
+X-Ray and advanced health checkups.
+</p>
+
+<a href="{% url 'diagnostic_services' %}"
+   class="btn btn-outline-primary">
+    Know More
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- Pharmacy -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1580281657527-47f249e8f7b7?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+Hospital Pharmacy
+</h4>
+
+<p>
+24-hour pharmacy service providing genuine medicines
+and healthcare products.
+</p>
+
+<a href="{% url 'pharmacy' %}" class="btn btn-outline-primary">
+View Pharmacy
+</a>
+
+
+
+</div>
+</div>
+
+</div>
+
+
+
+
+<!-- Patient Care -->
+<div class="col-lg-4 col-md-6">
+
+<div class="card shadow h-100 border-0">
+
+<img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c?auto=format&fit=crop&w=800&q=80"
+class="card-img-top"
+height="220">
+
+<div class="card-body">
+
+<h4 class="text-primary fw-bold">
+Patient Care
+</h4>
+
+<p>
+Dedicated nursing staff providing safe,
+comfortable and compassionate patient care.
+</p>
+
+<a href="{% url 'patient_care' %}" class="btn btn-outline-primary">
+    Know More
+</a>
+
+</div>
+</div>
+
+</div>
+
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- Why Choose Us -->
+
+<section class="bg-light py-5">
+
+<div class="container text-center">
+
+<h2 class="fw-bold text-primary">
+Why Choose City Care Hospital?
+</h2>
+
+
+<div class="row mt-4">
+
+
+<div class="col-md-3">
+<h3>24/7</h3>
+<p>Emergency Service</p>
+</div>
+
+
+<div class="col-md-3">
+<h3>100+</h3>
+<p>Expert Doctors</p>
+</div>
+
+
+<div class="col-md-3">
+<h3>50K+</h3>
+<p>Happy Patients</p>
+</div>
+
+
+<div class="col-md-3">
+<h3>20+</h3>
+<p>Medical Departments</p>
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+{% endblock %}

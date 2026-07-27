@@ -1,0 +1,381 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About Us - City Care Hospital{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="py-5 text-white"
+style="background: linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+url('https://images.unsplash.com/photo-1586773860418-d37222d8fce3'); 
+background-size:cover; background-position:center;">
+
+<div class="container text-center py-5">
+
+<h1 class="display-3 fw-bold">
+Welcome to City Care Hospital
+</h1>
+
+<p class="lead">
+Advanced Healthcare With Compassion & Technology
+</p>
+
+<a href="{% url 'appointment' %}" class="btn btn-light btn-lg mt-3">
+Book Appointment
+</a>
+
+</div>
+
+</section>
+
+
+
+<!-- About Hospital -->
+
+<section class="py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+
+<div class="col-md-6">
+
+<img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d"
+class="img-fluid rounded shadow"
+alt="Hospital">
+
+</div>
+
+
+<div class="col-md-6">
+
+<h2 class="fw-bold text-primary">
+About Our Hospital
+</h2>
+
+<p>
+City Care Hospital is a modern healthcare facility providing
+high-quality medical treatment with experienced doctors,
+advanced equipment and patient-focused services.
+</p>
+
+<p>
+Our Hospital Management System helps patients easily manage
+appointments, medical records and healthcare services.
+</p>
+
+
+<a href="{% url 'services' %}" 
+class="btn btn-primary">
+View Services
+</a>
+
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+<!-- Mission Cards -->
+
+<section class="bg-light py-5">
+
+<div class="container">
+
+<div class="row g-4">
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 h-100 text-center">
+
+<img src="https://images.unsplash.com/photo-1576091160399-112ba8d25d1d"
+class="card-img-top"
+height="220">
+
+
+<div class="card-body">
+
+<h4 class="text-primary">
+Our Mission
+</h4>
+
+<p>
+To provide affordable and quality healthcare
+for every patient.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 h-100 text-center">
+
+
+<img src="https://images.unsplash.com/photo-1551076805-e1869033e561"
+class="card-img-top"
+height="220">
+
+
+<div class="card-body">
+
+<h4 class="text-primary">
+Advanced Treatment
+</h4>
+
+<p>
+Using modern medical technology and equipment
+for better healthcare.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 h-100 text-center">
+
+
+<img src="https://images.unsplash.com/photo-1584982751601-97dcc096659c"
+class="card-img-top"
+height="220">
+
+
+<div class="card-body">
+
+<h4 class="text-primary">
+Patient Care
+</h4>
+
+<p>
+Our patients receive personal attention
+and excellent support.
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Statistics -->
+
+<section class="py-5 bg-primary text-white">
+
+<div class="container">
+
+<div class="row text-center">
+
+
+<div class="col-md-3">
+
+<h1 class="fw-bold">
+25+
+</h1>
+
+<p>
+Years Experience
+</p>
+
+</div>
+
+
+<div class="col-md-3">
+
+<h1 class="fw-bold">
+150+
+</h1>
+
+<p>
+Expert Doctors
+</p>
+
+</div>
+
+
+<div class="col-md-3">
+
+<h1 class="fw-bold">
+10000+
+</h1>
+
+<p>
+Happy Patients
+</p>
+
+</div>
+
+
+<div class="col-md-3">
+
+<h1 class="fw-bold">
+24/7
+</h1>
+
+<p>
+Emergency Service
+</p>
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Patient Care Section -->
+
+
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row align-items-center g-5">
+
+            <!-- Content -->
+            <div class="col-lg-6">
+
+                <span class="text-primary fw-semibold">
+                    Trusted Healthcare Partner
+                </span>
+
+                <h2 class="fw-bold display-6 mt-2">
+                    Patient First Approach
+                </h2>
+
+                <p class="text-muted fs-5 mt-3">
+                    At City Care Hospital, our patients are our top priority.
+                    We provide advanced medical care with compassion,
+                    modern technology, and experienced healthcare professionals.
+                </p>
+
+                <p class="text-muted">
+                    Our services include OPD consultation, emergency care,
+                    advanced diagnostics, surgeries, pharmacy support,
+                    and easy online appointment booking for a smooth
+                    healthcare experience.
+                </p>
+
+                <div class="d-flex gap-3 mt-4">
+
+                    <a href="{% url 'appointment' %}" 
+                       class="btn btn-primary px-4 py-2 rounded-pill">
+                        Book Appointment
+                    </a>
+
+                    <a href="{% url 'services' %}" 
+                       class="btn btn-outline-primary px-4 py-2 rounded-pill">
+                        Our Services
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <!-- Image -->
+            <div class="col-lg-6">
+
+                <div class="position-relative">
+
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?auto=format&fit=crop&w=900&q=80"
+                         class="img-fluid rounded-4 shadow-lg"
+                         alt="Doctor treating patient in hospital">
+
+
+                    <div class="position-absolute bottom-0 start-0 bg-white shadow rounded-3 p-3 m-3">
+
+                        <h5 class="text-primary fw-bold mb-1">
+                            24/7 Emergency Care
+                        </h5>
+
+                        <p class="mb-0 text-muted">
+                            Professional doctors & nurses always available
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- Call To Action -->
+
+<section class="py-5 text-center bg-dark text-white">
+
+
+<div class="container">
+
+
+<h2>
+Need Medical Assistance?
+</h2>
+
+
+<p>
+Our doctors are available 24/7 for your healthcare needs.
+</p>
+
+
+<a href="{% url 'appointment' %}"
+class="btn btn-success btn-lg">
+Book Appointment Now
+</a>
+
+
+</div>
+
+
+</section>
+
+
+
+{% endblock %}

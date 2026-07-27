@@ -1,0 +1,472 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Our Doctors | City Care Hospital{% endblock %}
+
+{% block content %}
+
+<!-- ==========================
+        HERO SECTION
+=========================== -->
+<section class="py-5 text-white"
+style="background:linear-gradient(rgba(13,110,253,.8),rgba(13,110,253,.8)),
+url('https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80');
+background-size:cover;
+background-position:center;">
+
+<div class="container text-center">
+
+<h1 class="display-4 fw-bold">
+Our Expert Doctors
+</h1>
+
+<p class="lead mt-3">
+Meet our experienced specialists dedicated to providing
+world-class healthcare with compassion and excellence.
+</p>
+
+<a href="#doctor-list" class="btn btn-light btn-lg mt-3 px-4">
+View Doctors
+</a>
+
+</div>
+</section>
+
+<!-- ==========================
+        SEARCH
+=========================== -->
+
+<section class="py-5 bg-light">
+
+<div class="container">
+
+<div class="row justify-content-center">
+
+<div class="col-lg-6">
+
+<div class="input-group shadow">
+
+<input
+type="text"
+class="form-control form-control-lg"
+placeholder="Search Doctor">
+
+<button class="btn btn-primary">
+<i class="bi bi-search"></i> Search
+</button>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+        DOCTORS
+=========================== -->
+
+<section class="py-5" id="doctor-list">
+
+<div class="container">
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold text-primary">
+Meet Our Specialists
+</h2>
+
+<p class="text-muted">
+Highly qualified doctors committed to your health.
+</p>
+
+</div>
+
+<div class="row g-4">
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/men/45.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Rajesh Sharma
+</h4>
+
+<span class="badge bg-primary mb-3">
+Cardiologist
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, MD (Cardiology)
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+15 Years Experience
+
+</p>
+
+<p>
+
+Expert in heart surgery, angioplasty,
+cardiac consultation and preventive care.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/women/65.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Priya Mehta
+</h4>
+
+<span class="badge bg-success mb-3">
+Neurologist
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, DM Neurology
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+12 Years Experience
+
+</p>
+
+<p>
+
+Specialist in brain disorders,
+stroke management and neurological treatment.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/men/75.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Amit Verma
+</h4>
+
+<span class="badge bg-danger mb-3">
+Orthopedic
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, MS Orthopedics
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+18 Years Experience
+
+</p>
+
+<p>
+
+Expert in bone fractures,
+joint replacement and sports injuries.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/women/25.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Sneha Kulkarni
+</h4>
+
+<span class="badge bg-warning text-dark mb-3">
+Pediatrician
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, MD Pediatrics
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+10 Years Experience
+
+</p>
+
+<p>
+
+Providing complete healthcare
+for infants, children and adolescents.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/men/20.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Arjun Patil
+</h4>
+
+<span class="badge bg-info mb-3">
+Dermatologist
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, MD Dermatology
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+9 Years Experience
+
+</p>
+
+<p>
+
+Skin care specialist treating acne,
+allergies, hair and cosmetic concerns.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- Doctor -->
+
+<div class="col-lg-4 col-md-6">
+
+<div class="card border-0 shadow-lg h-100">
+
+<img src="https://randomuser.me/api/portraits/women/52.jpg"
+class="card-img-top"
+style="height:330px;object-fit:cover;">
+
+<div class="card-body">
+
+<h4 class="fw-bold">
+Dr. Neha Singh
+</h4>
+
+<span class="badge bg-secondary mb-3">
+Gynecologist
+</span>
+
+<p class="text-muted">
+
+<i class="bi bi-award"></i>
+MBBS, MS Gynecology
+
+</p>
+
+<p class="text-muted">
+
+<i class="bi bi-briefcase-fill"></i>
+14 Years Experience
+
+</p>
+
+<p>
+
+Specialized in women's healthcare,
+pregnancy and fertility consultation.
+
+</p>
+
+<div class="d-grid">
+
+<a href="{% url 'appointment' %}" class="btn btn-primary">
+    Book Appointment
+</a>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ==========================
+        WHY CHOOSE OUR DOCTORS
+=========================== -->
+
+<section class="py-5 bg-primary text-white">
+
+<div class="container">
+
+<div class="row text-center">
+
+<div class="col-md-3">
+
+<h2 class="fw-bold">50+</h2>
+
+<p>Expert Doctors</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2 class="fw-bold">20+</h2>
+
+<p>Departments</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2 class="fw-bold">25K+</h2>
+
+<p>Happy Patients</p>
+
+</div>
+
+<div class="col-md-3">
+
+<h2 class="fw-bold">24/7</h2>
+
+<p>Emergency Support</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+{% endblock %}

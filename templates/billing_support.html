@@ -1,0 +1,204 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Contact Billing Support | CityCare Hospital
+{% endblock %}
+
+{% block content %}
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+
+<style>
+.hero{
+    background:linear-gradient(rgba(0,82,155,.9), rgba(0,82,155,.9));
+    color:#fff;
+    padding:80px 0;
+}
+
+.contact-card{
+    border:none;
+    border-radius:15px;
+    transition:.3s;
+}
+
+.contact-card:hover{
+    transform:translateY(-5px);
+    box-shadow:0 10px 25px rgba(0,0,0,.12);
+}
+
+.icon-box{
+    width:70px;
+    height:70px;
+    background:#0d6efd;
+    color:#fff;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:30px;
+    margin:auto;
+}
+</style>
+
+<!-- Hero -->
+<section class="hero text-center">
+    <div class="container">
+        <h1 class="fw-bold">
+            <i class="bi bi-headset"></i>
+            Contact Billing Support
+        </h1>
+
+        <p class="lead mt-3">
+            Our billing team is ready to help with payments, invoices, insurance claims, and billing questions.
+        </p>
+    </div>
+</section>
+
+<!-- Success Message -->
+<div class="container mt-4">
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-success alert-dismissible fade show shadow">
+                <i class="bi bi-check-circle-fill me-2"></i>
+                {{ message }}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        {% endfor %}
+    {% endif %}
+</div>
+
+<!-- Contact Cards -->
+<section class="py-5">
+    <div class="container">
+
+        <div class="row g-4">
+
+            <div class="col-md-4">
+                <div class="card contact-card shadow p-4 text-center h-100">
+                    <div class="icon-box mb-3">
+                        <i class="bi bi-telephone-fill"></i>
+                    </div>
+
+                    <h4>Call Us</h4>
+
+                    <p class="mb-0">+91 98765 43210</p>
+                    <p>+91 020 1234 5678</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card contact-card shadow p-4 text-center h-100">
+                    <div class="icon-box mb-3 bg-success">
+                        <i class="bi bi-envelope-fill"></i>
+                    </div>
+
+                    <h4>Email</h4>
+
+                    <p>billing@citycarehospital.com</p>
+                    <p>insurance@citycarehospital.com</p>
+
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="card contact-card shadow p-4 text-center h-100">
+                    <div class="icon-box mb-3 bg-danger">
+                        <i class="bi bi-clock-fill"></i>
+                    </div>
+
+                    <h4>Support Hours</h4>
+
+                    <p>Monday - Saturday</p>
+                    <p>8:00 AM – 8:00 PM</p>
+
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Billing Form -->
+<section class="py-5 bg-light">
+
+    <div class="container">
+
+        <div class="row justify-content-center">
+
+            <div class="col-lg-8">
+
+                <div class="card shadow-lg border-0 rounded-4">
+
+                    <div class="card-body p-5">
+
+                        <h2 class="text-center text-primary mb-4">
+                            <i class="bi bi-pencil-square"></i>
+                            Send Billing Query
+                        </h2>
+
+                        <form method="POST">
+
+                            {% csrf_token %}
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Full Name
+                                </label>
+                                {{ form.full_name }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Email Address
+                                </label>
+                                {{ form.email }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Phone Number
+                                </label>
+                                {{ form.phone }}
+                            </div>
+
+                            <div class="mb-3">
+                                <label class="form-label fw-semibold">
+                                    Billing Issue
+                                </label>
+                                {{ form.issue }}
+                            </div>
+
+                            <div class="mb-4">
+                                <label class="form-label fw-semibold">
+                                    Message
+                                </label>
+                                {{ form.message }}
+                            </div>
+
+                            <div class="text-center">
+
+                                <button type="submit" class="btn btn-primary btn-lg px-5">
+                                    <i class="bi bi-send-fill"></i>
+                                    Submit Request
+                                </button>
+
+                            </div>
+
+                        </form>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+{% endblock %}

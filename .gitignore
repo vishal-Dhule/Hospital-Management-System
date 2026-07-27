@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Virtual Environment
+venv/
+env/
+
+# Database
+db.sqlite3
+
+# Django
+*.log
+
+# VS Code
+.vscode/
+
+# Environment variables
+.env
+
+# Static collected files
+staticfiles/
+
+# Media
+media/
+
+# OS
+Thumbs.db
+.DS_Store

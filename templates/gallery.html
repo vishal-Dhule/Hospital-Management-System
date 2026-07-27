@@ -1,0 +1,201 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}
+Gallery | CityCare Hospital
+{% endblock %}
+
+{% block content %}
+
+<!-- Hero Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <h1 class="display-4 fw-bold">Hospital Gallery</h1>
+        <p class="lead">
+            Explore our modern facilities, expert medical team, advanced equipment,
+            and patient care environment.
+        </p>
+    </div>
+</section>
+
+<!-- Gallery -->
+<section class="py-5 bg-light">
+    <div class="container">
+
+        <div class="text-center mb-5">
+            <h2 class="fw-bold text-primary">Our Facilities</h2>
+            <p class="text-muted">
+                Take a virtual tour of CityCare Hospital.
+            </p>
+        </div>
+
+        <div class="row g-4">
+
+            <!-- Image 1 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Hospital Building</h5>
+                        <p class="text-muted">Modern infrastructure with world-class healthcare facilities.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 2 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1579684385127-1ef15d508118?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Operation Theatre</h5>
+                        <p class="text-muted">State-of-the-art operation theatres equipped with modern technology.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 3 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1516549655169-df83a0774514?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Emergency Care</h5>
+                        <p class="text-muted">24/7 emergency department with rapid response medical teams.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 4 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1584515933487-779824d29309?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Patient Room</h5>
+                        <p class="text-muted">Comfortable patient rooms ensuring quality care and recovery.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 5 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1551076805-e1869033e561?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Diagnostic Lab</h5>
+                        <p class="text-muted">Advanced laboratory services for accurate and fast diagnosis.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 6 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1538108149393-fbbd81895907?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Doctors Team</h5>
+                        <p class="text-muted">Highly qualified specialists dedicated to exceptional patient care.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 7 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Reception</h5>
+                        <p class="text-muted">Friendly staff ready to assist patients and visitors.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 8 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">MRI & CT Scan</h5>
+                        <p class="text-muted">Latest imaging equipment providing precise diagnostic results.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image 9 -->
+            <div class="col-md-4">
+                <div class="card shadow border-0 gallery-card">
+                    <img src="https://images.unsplash.com/photo-1580281657527-47a4d3d8f0d3?w=700"
+                        class="card-img-top" alt="">
+                    <div class="card-body text-center">
+                        <h5 class="fw-bold">Pharmacy</h5>
+                        <p class="text-muted">24-hour pharmacy offering genuine medicines and healthcare products.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<!-- Statistics -->
+<section class="py-5 bg-white">
+    <div class="container">
+        <div class="row text-center">
+
+            <div class="col-md-3">
+                <h2 class="text-primary fw-bold">25+</h2>
+                <p>Departments</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="text-success fw-bold">150+</h2>
+                <p>Doctors</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="text-danger fw-bold">500+</h2>
+                <p>Beds</p>
+            </div>
+
+            <div class="col-md-3">
+                <h2 class="text-warning fw-bold">1M+</h2>
+                <p>Happy Patients</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<style>
+
+.gallery-card{
+transition:0.4s;
+overflow:hidden;
+border-radius:15px;
+}
+
+.gallery-card:hover{
+transform:translateY(-10px);
+box-shadow:0 15px 35px rgba(0,0,0,.25);
+}
+
+.gallery-card img{
+height:250px;
+object-fit:cover;
+transition:.5s;
+}
+
+.gallery-card:hover img{
+transform:scale(1.08);
+}
+
+</style>
+
+{% endblock %}

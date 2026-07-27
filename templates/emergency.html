@@ -1,0 +1,641 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block title %}
+Emergency Contact | CityCare Hospital
+{% endblock %}
+
+
+
+{% block content %}
+
+
+<!-- Hero Section -->
+<section class="bg-danger text-white py-5">
+
+<div class="container">
+
+<div class="row align-items-center">
+
+
+<div class="col-lg-7">
+
+<h1 class="display-4 fw-bold">
+<i class="bi bi-telephone-fill"></i>
+Emergency Contact
+</h1>
+
+
+<p class="lead mt-3">
+
+In case of any medical emergency, contact CityCare Hospital immediately.
+
+Our emergency team is available
+
+<strong>
+24 Hours a Day, 7 Days a Week.
+</strong>
+
+</p>
+
+
+
+<a href="tel:+9118001234567"
+class="btn btn-light btn-lg mt-3">
+
+<i class="bi bi-telephone-fill"></i>
+Call Emergency
+
+</a>
+
+
+</div>
+
+
+
+<div class="col-lg-5 text-center mt-4">
+
+<img src="https://images.unsplash.com/photo-1586773860418-d37222d8fce3"
+class="img-fluid rounded shadow"
+alt="Emergency">
+
+</div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+
+
+
+<!-- Emergency Numbers -->
+
+<section class="py-5">
+
+<div class="container">
+
+
+<div class="text-center mb-5">
+
+<h2 class="fw-bold">
+Emergency Contact Numbers
+</h2>
+
+<p class="text-muted">
+Save these numbers for immediate assistance.
+</p>
+
+</div>
+
+
+
+<div class="row g-4">
+
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 text-center h-100">
+
+<div class="card-body">
+
+<i class="bi bi-hospital-fill display-3 text-danger"></i>
+
+
+<h4 class="mt-3">
+Emergency Helpline
+</h4>
+
+
+<h3 class="text-primary">
+1800-123-4567
+</h3>
+
+
+<p>
+Available 24/7
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 text-center h-100">
+
+<div class="card-body">
+
+
+<i class="bi bi-ambulance display-3 text-success"></i>
+
+
+<h4 class="mt-3">
+Ambulance
+</h4>
+
+
+<h3 class="text-success">
+102
+</h3>
+
+
+<p>
+Fast ambulance service
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4">
+
+<div class="card shadow border-0 text-center h-100">
+
+<div class="card-body">
+
+
+<i class="bi bi-heart-pulse-fill display-3 text-primary"></i>
+
+
+<h4 class="mt-3">
+ICU Emergency
+</h4>
+
+
+<h3 class="text-danger">
++91 98765 43210
+</h3>
+
+
+<p>
+Critical care support
+</p>
+
+
+</div>
+
+</div>
+
+</div>
+
+
+
+
+</div>
+
+
+</div>
+
+</section>
+
+
+
+
+
+
+
+<!-- Emergency Instructions -->
+
+<section class="py-5 bg-light">
+
+
+<div class="container">
+
+
+<div class="row align-items-center">
+
+
+
+<div class="col-lg-6">
+
+<img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef"
+class="img-fluid rounded shadow">
+
+</div>
+
+
+
+<div class="col-lg-6">
+
+
+<h2 class="fw-bold mb-4">
+
+What To Do During Emergency
+
+</h2>
+
+
+
+<h5>
+<i class="bi bi-check-circle-fill text-success"></i>
+Stay Calm
+</h5>
+
+<p>
+Keep patient comfortable and avoid panic.
+</p>
+
+
+
+<h5>
+<i class="bi bi-check-circle-fill text-success"></i>
+Call Immediately
+</h5>
+
+<p>
+Contact emergency helpline.
+</p>
+
+
+
+<h5>
+<i class="bi bi-check-circle-fill text-success"></i>
+Share Patient Details
+</h5>
+
+<p>
+Provide correct information.
+</p>
+
+
+
+<h5>
+<i class="bi bi-check-circle-fill text-success"></i>
+Follow Medical Advice
+</h5>
+
+<p>
+Follow emergency instructions.
+</p>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Success Message -->
+
+
+<section class="container mt-4">
+
+
+{% if messages %}
+
+{% for message in messages %}
+
+
+<div class="alert alert-success alert-dismissible fade show">
+
+
+{{message}}
+
+
+<button type="button"
+class="btn-close"
+data-bs-dismiss="alert">
+
+</button>
+
+
+</div>
+
+
+{% endfor %}
+
+{% endif %}
+
+
+
+</section>
+
+
+
+
+
+
+
+<!-- Emergency Request Form -->
+
+
+<section class="py-5">
+
+
+<div class="container">
+
+
+<div class="row justify-content-center">
+
+
+<div class="col-lg-8">
+
+
+<div class="card shadow border-0">
+
+
+<div class="card-header bg-danger text-white text-center">
+
+
+<h3>
+
+<i class="bi bi-envelope-fill"></i>
+
+Request Emergency Assistance
+
+</h3>
+
+
+</div>
+
+
+
+
+
+<div class="card-body">
+
+
+<form method="POST">
+
+
+{% csrf_token %}
+
+
+
+<div class="row">
+
+
+
+<div class="col-md-6 mb-3">
+
+
+<label class="form-label">
+Full Name
+</label>
+
+
+<input type="text"
+name="name"
+class="form-control"
+placeholder="Enter Name"
+required>
+
+
+</div>
+
+
+
+
+<div class="col-md-6 mb-3">
+
+
+<label class="form-label">
+Phone Number
+</label>
+
+
+<input type="tel"
+name="phone"
+class="form-control"
+placeholder="Enter Phone"
+required>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+Current Location
+</label>
+
+
+<input type="text"
+name="location"
+class="form-control"
+placeholder="Enter Location"
+required>
+
+
+</div>
+
+
+
+
+
+
+<div class="mb-3">
+
+
+<label class="form-label">
+Emergency Details
+</label>
+
+
+<textarea
+
+name="emergency_details"
+
+class="form-control"
+
+rows="5"
+
+placeholder="Describe emergency..."
+
+required>
+
+</textarea>
+
+
+</div>
+
+
+
+
+
+
+<button type="submit"
+class="btn btn-danger btn-lg w-100">
+
+
+<i class="bi bi-send-fill"></i>
+
+Send Emergency Request
+
+
+</button>
+
+
+
+</form>
+
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+
+
+
+
+<!-- Contact Info -->
+
+
+<section class="py-5 bg-dark text-white">
+
+
+<div class="container">
+
+
+<div class="row text-center">
+
+
+
+<div class="col-md-4">
+
+<i class="bi bi-geo-alt-fill display-5 text-warning"></i>
+
+
+<h4>
+Hospital Address
+</h4>
+
+
+<p>
+
+CityCare Hospital<br>
+
+MG Road, Pune, Maharashtra
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<i class="bi bi-envelope-fill display-5 text-info"></i>
+
+
+<h4>
+Email
+</h4>
+
+
+<p>
+
+emergency@citycarehospital.com
+
+</p>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="col-md-4">
+
+
+<i class="bi bi-clock-fill display-5 text-success"></i>
+
+
+<h4>
+Availability
+</h4>
+
+
+<p>
+
+24 Hours × 7 Days
+
+</p>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+</section>
+
+
+
+
+{% endblock %}
